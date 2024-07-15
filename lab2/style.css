@@ -1,0 +1,138 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* ----Grid System----- */
+
+img{
+    width:100%;
+    height: 100%;
+    display: block;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto; /*adds up to 100%*/
+    width: 1200px;
+    margin: 20px auto;
+    background-color: rgb(250, 250, 250);
+    box-shadow: 1px 1px 3px gray;
+}
+
+.img-container{
+    margin: 10px;
+    border: solid black 3px;
+}
+
+/* ---- Media queries */
+/* breakpoint large screen up to 1200px */
+@media screen and (max-width: 1200px){
+    .grid-container{
+        background-color: pink;
+        width: 800px;
+        grid-template-columns: auto auto;
+    }
+
+}
+
+/* breakpoint for small screens */
+
+@media screen and (max-width:900px){
+    .grid-container{
+        background-color: yellow;
+        width: 80%;
+        grid-template-columns: auto;
+    }
+
+
+}
+
+/* ------ Main Container ------- */
+
+.header-container{
+    background-color: purple;
+    color: white;
+    display: flex;
+}
+
+/* > means for all children of the parent header-container */
+.header-container > div{
+    padding: 20px;
+}
+
+.header-container> div:nth-child(3){
+    margin: 0 0 0 auto;
+}
+
+.intro-container{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    height: 300px;
+
+}
+
+.nav-menu{
+    background-color: lightpink;
+
+}
+
+.content{
+    background-color: hotpink;
+}
+
+.blog{
+    background-color: blueviolet;
+}
+
+.footer{
+    background-color: darkcyan;
+    color: white;
+    height: 200px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+footer > div{
+    border:  solid pink 2px;
+}
+
+/* breakpoint up to 900px - tablet view*/
+
+@media screen and (max-width:900px){
+
+    .nav-menu{
+        background-color: olive;
+    }
+
+    .content{
+        grid-column: span 2;
+    }
+
+    .blog{
+       grid-column: span 3;
+    }
+
+}
+
+/* breakpoint up to 600px - smartphone view*/
+
+@media screen and (max-width:600px){
+
+    .nav-menu{
+        grid-column: span 3;
+        background-color: olive;
+    }
+
+    .content{
+        grid-column: span 3;
+    }
+
+    .blog{
+       grid-column: span 3;
+    }
+
+}
