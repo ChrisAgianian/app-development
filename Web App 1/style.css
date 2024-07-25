@@ -1,0 +1,396 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* ---HEADER AND MENU----- */
+
+.menucontainer{
+    position: relative;
+    top: 0%;
+    left: 0%;
+    right:0%;
+    border: 2px solid red;
+    background-color: lightblue;
+    /* z-index: 1000; */
+}
+
+.headercontainer, .navmenu{
+    display: flex;
+    width: 100%;
+    background-color: lightblue;
+    color: yellow;
+    font-weight: bolder;
+}
+
+.headercontainer > div, .navmenu>div{
+    padding: 20px;
+}
+
+.headercontainer> div:nth-child(2){
+    margin: 0 0 0 auto;
+}
+
+.navmenu{
+    display: none;
+}
+
+.navmenu> div:nth-child(2){
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.collapsemenu{
+    background-color:rgba(128, 128, 128, 0.7) ;
+    padding: 20px;
+    display: none; 
+    /* display: block; */
+}
+
+.collapsemenu>div{
+    padding: 18px;
+    color:white;
+}
+
+.collapsemenu>div:hover{
+    border-bottom: 1px white ridge;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.closeToOpen{
+    display: block;
+}
+
+@media screen and (max-width:600px) {
+    .headercontainer{
+        display: none;
+    }
+
+    .navmenu{
+        display: flex;
+    }
+}
+
+/* ----BACKGROUND PICTURE------- */
+
+.herosection{
+    border: 2px solid red;
+    height: 300px;
+    margin-top: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), 
+    rgba(0,0,0,0.5)), url("images/logos/learning.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+}
+
+.heropic{
+    height: 200px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: yellowgreen;
+}
+
+.backpic{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ------MAIN PAGE CARDS----- */
+
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* .cardscontainer:hover{
+    border: magenta 2px dashed;
+    transform: scale(1.1);
+} */
+
+.card1, .card2{
+    border: 2px solid red;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+
+}
+
+@media screen and (max-width:600px){
+    .cards{
+        display: grid;
+        grid-template-columns: auto;
+    }
+}
+
+
+/* -------Footer Styles----- */
+
+.footer{
+    background-color: lightblue;
+    /* height: 150px; */
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border: 2px solid red;
+    margin: 10px;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+footer > div{
+    border:  solid pink 2px;
+}
+
+@media screen and (max-width:600px){
+    .footer{
+        grid-template-columns: auto;
+        align-items: center;
+        justify-content: center;
+
+    }
+}
+
+.contacttitle{
+    text-align: center;
+    
+}
+
+.logo1{
+    /* display: flex; */
+    width: 80px;
+    height:80px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+
+}
+
+.logo2{
+    /* display: flex; */
+    width: 80px;
+    height:80px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+
+}
+
+.logo3{
+    /* display: flex; */
+    width: 80px;
+    height:80px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+
+}
+
+.num{
+    white-space: nowrap;
+    margin-left: 20px;
+}
+
+.email{
+    white-space: nowrap;
+}
+.mailpar{
+    white-space: nowrap;
+    margin-left: 20px;
+}
+
+.follow{
+    white-space: nowrap;
+    margin-left: 20px;
+}
+
+.logo1pic, .logo2pic, .logo3pic{
+    width:100%;
+    height:100%;
+    /* display:block; */
+}
+
+.copyright{
+    height: 40px;
+    text-align: center;
+    border: 2px solid lightgreen;
+    color: black;
+    margin-top: 10px;
+}
+
+/* -----Animals Page Cards----- */
+
+.header1{
+    margin-top:10px;
+    text-align: center;
+    color: yellowgreen;
+}
+
+.animalcards{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    width: 900px;
+    margin: 20px auto;
+    background-color: rgb(250, 250, 250);
+    box-shadow: 1px 1px 3px gray;
+    /* cursor: pointer; */
+}
+
+.modalpar{
+    font-weight: bolder;
+    background-color: lightblue;
+    height: 50px;
+    text-align: center;
+}
+
+img{
+    width:100%;
+    height: 100%;
+    display: block;
+}
+
+.img-container:hover{
+    border: green 2px dashed;
+    transform: scale(1.1);
+}
+
+.img-container{
+    margin: 10px;
+    border: solid black 3px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:600px) {
+    .animalcards{
+        background-color: pink;
+        grid-template-columns: auto auto;
+        width: 80%;
+    }
+}
+
+/* ---- modal windows */
+
+.modalwindow{
+    background-color: rgba(30, 30, 30, 0.7);
+    position: fixed;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    display: none; 
+}
+
+.modalcontent{
+    width: 60%;
+    margin: 20% auto;
+    background-color: white;
+    /* display: flex; */
+}
+
+.closemodal1, .closemodal2, .closemodal3, .closemodal4, .closemodal5,
+.closemodal6, .closemodal7, .closemodal8, .closemodal9, .closemodal10{
+    float: right;
+    border: 2px solid red;
+    background-color: red;
+}
+
+/* ----Colors Page Cards------ */
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsecont{
+    width: 80%;
+    margin: auto;
+    border: 2px solid red;
+}
+
+
+.collapsible {
+    background-color: gray;
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    margin-top: 30px;
+}
+  
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+    background-color: #ccc;
+}
+  
+/* Style the collapsible content. Note: hidden by default */
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+}
+
+.p1{
+    color: red;
+    font-weight: bolder;
+}
+
+.p2{
+    color: green;
+    font-weight: bolder;
+}
+
+
+.p3{
+    color: blue;
+    font-weight: bolder;
+}
+
+.p4{
+    color: orange;
+    font-weight: bolder;
+}
+
+.p5{
+    color: violet;
+    font-weight: bolder;
+}
+
+.collapsible:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+}
+  
+.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
