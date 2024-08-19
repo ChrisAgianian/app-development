@@ -1,0 +1,218 @@
+/* *{
+  margin: 0;
+  padding: 0;
+} */
+
+body{
+  width: 100%;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;  
+}
+
+/* --------Navbar Styles---------- */
+.title{
+  text-align: center;
+  color: white;
+  font-weight: bolder;
+}
+
+.navbar{
+  margin-top: 200px;
+}
+
+.navcontainer{
+  height: 300px;
+  background-image: url('./images/background.png');
+  opacity: 0.8;
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Centers the image */
+  padding: 20px; /* Adds padding around the container */
+  text-align: center; /* Centers the text inside */
+}
+
+.navbar button {
+  background-color: rgba(0, 0, 0); /* Semi-transparent background for buttons */
+  color:darkslategray;
+  border: none; /* Remove default button border */
+  padding: 10px 20px; /* Padding inside buttons */
+  border-radius: 25px; /* Rounded corners */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+.navbar button:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Darker background on hover */
+}
+
+.navbar button a {
+  text-decoration: none; /* Remove default underline from links */
+  color: white; /* Text color of links */
+}
+
+.btngroup{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* ----------Home Page Styles---------------------- */
+
+.hometitle, .servicetitle, .productstitle, .contacttitle{
+  text-align: center;
+  font-style: oblique;
+  color: gray;
+}
+
+.homepar, .servicepar, .productspar, .contactpar{
+  text-align: center;
+  color: darkslategrey;
+}
+
+.home-card-container{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.card{
+  position: relative;
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer; /* Make the card clickable */
+  transition: transform 0.3s ease; /* Animation on hover */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card h3 {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  margin: 0;
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: #fff;
+  border-radius: 5px;
+}
+/* ----------Services Page Styles---------------------- */
+
+.services-card-container{
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* ----------Products Page Styles---------------------- */
+
+.products-card-container{
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* ----------Contact Us Page Styles-------------------- */
+
+.contact-card-container{
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* ----------Footer Styles-------------- */
+.footer{
+  text-align: center;
+  background-color: grey;
+  color: white;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footertitle{
+  margin-top: 30px;
+}
+
+.footerbtngroup{
+  display: flex;
+  justify-content: space-between;
+}
+
+.footerbtngroup Link{
+  cursor: pointer;
+  margin: auto;
+  text-decoration: none;
+}
+
+/* -----Modal windows Styles------- */
+.modalclose {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.modal-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-body {
+  margin-top: 10px;
+}
+
+.modal-body img {
+  max-width: 100%;
+  max-height: 60%; /* Adjust if needed */
+  object-fit: contain; /* Ensure the image fits within its container */
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
